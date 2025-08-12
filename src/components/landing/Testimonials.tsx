@@ -6,24 +6,24 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "[Client Name]",
+    name: "Sarah M.",
     city: "Tacoma",
     quote:
-      "[Placeholder: 'Our kitchen remodel exceeded all expectations! The team was professional and the results are stunning.']",
+      "Our kitchen remodel exceeded expectations. Professional team, clear communication, stunning results.",
     img: img1,
   },
   {
-    name: "[Client Name]",
+    name: "Daniel R.",
     city: "Puyallup",
     quote:
-      "[Placeholder: 'They managed the project flawlessly and kept us updated. We love our new kitchen!']",
+      "They managed everything flawlessly and kept us updated. We love our new kitchen!",
     img: img2,
   },
   {
-    name: "[Client Name]",
+    name: "Priya K.",
     city: "Lakewood",
     quote:
-      "[Placeholder: 'Top-notch craftsmanship and great design advice. Highly recommend.']",
+      "Top-notch craftsmanship and great design advice. Highly recommend.",
     img: img3,
   },
 ];
@@ -33,7 +33,7 @@ export default function Testimonials() {
     <section id="testimonials" className="container py-16 md:py-24">
       <header className="mb-8 text-center">
         <h2 className="text-3xl font-bold text-primary md:text-4xl">What Our Happy Clients Say</h2>
-        <p className="mt-2 text-foreground/70">[Placeholder: Social proof from recent projects]</p>
+        <p className="mt-2 text-foreground/70">Kind words from homeowners across the Tacoma area.</p>
       </header>
       <div className="grid gap-6 md:grid-cols-3">
         {testimonials.map((t) => (

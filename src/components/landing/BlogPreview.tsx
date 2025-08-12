@@ -4,9 +4,9 @@ import b2 from "@/assets/blog-2.jpg";
 import b3 from "@/assets/blog-3.jpg";
 
 const posts = [
-  { title: "Top 5 Kitchen Trends for 2025", desc: "[Placeholder: Quick insights intro]", img: b1 },
-  { title: "How to Choose Countertops", desc: "[Placeholder: Materials, durability, and style]", img: b2 },
-  { title: "Budget-Friendly Kitchen Upgrades", desc: "[Placeholder: High impact, low cost ideas]", img: b3 },
+  { title: "Top 5 Kitchen Trends for 2025", desc: "Quick insights into layouts, finishes, and features trending now.", img: b1 },
+  { title: "How to Choose the Perfect Countertop", desc: "Compare quartz, granite, and more for performance and style.", img: b2 },
+  { title: "Budget-Friendly Kitchen Upgrades That Look Luxurious", desc: "High-impact ideas that maximize value without overspending.", img: b3 },
 ];
 
 export default function BlogPreview() {
@@ -14,7 +14,7 @@ export default function BlogPreview() {
     <section id="blog" className="container py-16 md:py-24">
       <header className="mb-8 text-center">
         <h2 className="text-3xl font-bold text-primary md:text-4xl">Kitchen Remodeling Insights & Inspiration</h2>
-        <p className="mt-2 text-foreground/70">[Placeholder: Our latest tips and articles]</p>
+        <p className="mt-2 text-foreground/70">Fresh tips and ideas from our remodel experts.</p>
       </header>
       <div className="grid gap-6 md:grid-cols-3">
         {posts.map((p) => (

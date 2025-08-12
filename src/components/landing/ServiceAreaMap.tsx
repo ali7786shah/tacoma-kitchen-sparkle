@@ -8,7 +8,19 @@ export default function ServiceAreaMap() {
         <p className="mt-2 text-foreground/70">Tacoma, Puyallup, Lakewood, Federal Way, University Place, Gig Harbor</p>
       </header>
       <div className="overflow-hidden rounded-lg border border-border shadow-sm">
-        <img src={mapImg} alt="Map of Tacoma service area with nearby cities" className="h-auto w-full object-cover" loading="lazy" />
+        <img src={mapImg} alt="Map of Tacoma region highlighting nearby neighborhoods" className="h-auto w-full object-cover" loading="lazy" />
+      </div>
+      <div className="mt-6">
+        <p className="mb-3 text-center text-sm text-foreground/70">Neighborhoods we serve</p>
+        <ul className="flex flex-wrap items-center justify-center gap-2">
+          {[
+            "Old Tacoma","Tacoma Junction","Browns Point","Fircrest","Hillsdale","Caledonia","Dash Point","Excelsior","Fern Hill","Fife","Fife Heights","Northeast Tacoma","Waller","Ruston","South Tacoma","Salishan"
+          ].map((n) => (
+            <li key={n} className="shrink-0">
+              <span className="inline-flex items-center rounded-full border border-border bg-accent/40 px-3 py-1 text-xs font-medium text-foreground/80">{n}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

@@ -1,13 +1,19 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Ruler, Boxes, Lightbulb, Layers, Home, Leaf } from "lucide-react";
+import heroImg from "@/assets/hero-kitchen.jpg";
+import teamImg from "@/assets/team-kitchen.jpg";
+import b1 from "@/assets/blog-1.jpg";
+import b2 from "@/assets/blog-2.jpg";
+import b3 from "@/assets/blog-3.jpg";
 
 const services = [
-  { title: "Kitchen Design & Planning", icon: Ruler, desc: "[Placeholder: Tailored layouts for flow and function]" },
-  { title: "Custom Cabinets & Countertops", icon: Boxes, desc: "[Placeholder: Built for your style and storage needs]" },
-  { title: "Lighting & Fixtures Installation", icon: Lightbulb, desc: "[Placeholder: Bright, efficient, beautiful]" },
-  { title: "Flooring & Tiling", icon: Layers, desc: "[Placeholder: Durable, timeless surfaces]" },
-  { title: "Full Kitchen Renovation", icon: Home, desc: "[Placeholder: From demo to final polish]" },
-  { title: "Eco-Friendly Upgrades", icon: Leaf, desc: "[Placeholder: Sustainable materials & options]" },
+  { title: "Kitchen Renovation", img: heroImg, desc: "Full redesign and transformation of your kitchen space." },
+  { title: "Kitchen Pricing", img: b2, desc: "Transparent, upfront estimates tailored to your budget." },
+  { title: "Kitchen Cabinets", img: b3, desc: "Custom and pre-fabricated cabinet installation." },
+  { title: "Kitchen Islands", img: heroImg, desc: "Functional, stylish island designs for added workspace." },
+  { title: "Countertops", img: b1, desc: "Granite, quartz, and other premium surface materials." },
+  { title: "Tile Backsplashes", img: b2, desc: "Stylish designs to complement your kitchen theme." },
+  { title: "Pantry Storage", img: teamImg, desc: "Smart storage solutions for maximum efficiency." },
+  { title: "Stainless Steel Sinks", img: b3, desc: "Durable, modern sink installations." },
 ];
 
 export default function ServicesSection() {
@@ -15,18 +21,14 @@ export default function ServicesSection() {
     <section id="services" className="container py-16 md:py-24">
       <header className="mb-8 text-center">
         <h2 className="text-3xl font-bold text-primary md:text-4xl">Our Comprehensive Kitchen Remodeling Services</h2>
-        <p className="mt-2 text-foreground/70">[Placeholder: Brief overview of services offered]</p>
+        <p className="mt-2 text-foreground/70">Explore our most-requested kitchen services.</p>
       </header>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map(({ title, icon: Icon, desc }) => (
+        {services.map(({ title, img, desc }) => (
           <Card key={title} className="transition-transform hover:-translate-y-0.5 hover:shadow">
+            <img src={img} alt={`${title} example`} className="h-40 w-full rounded-t-lg object-cover" loading="lazy" />
             <CardHeader>
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-md bg-secondary">
-                  <Icon className="text-primary" />
-                </div>
-                <CardTitle className="text-xl">{title}</CardTitle>
-              </div>
+              <CardTitle className="text-xl">{title}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-foreground/80">{desc}</p>

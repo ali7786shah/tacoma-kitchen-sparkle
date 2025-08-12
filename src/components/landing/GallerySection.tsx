@@ -9,7 +9,7 @@ export default function GallerySection() {
     <section id="gallery" className="container py-16 md:py-24">
       <header className="mb-8 text-center">
         <h2 className="text-3xl font-bold text-primary md:text-4xl">See Our Transformations: Before & After</h2>
-        <p className="mt-2 text-foreground/70">[Placeholder: From outdated to outstanding]</p>
+        <p className="mt-2 text-foreground/70">From outdated to outstanding — explore dramatic makeovers.</p>
       </header>
       <div className="grid gap-6 md:grid-cols-2">
         <BeforeAfterSlider

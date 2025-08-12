@@ -13,7 +13,7 @@ export default function AboutSection() {
         <div>
           <h2 className="text-3xl font-bold text-primary md:text-4xl">About Us</h2>
           <p className="mt-4 text-foreground/80">
-            [Placeholder: Short company intro] We specialize in transforming kitchens with a blend of thoughtful design and meticulous craftsmanship. Our local Tacoma team guides you from concept to completion with transparency and care.
+            We specialize in transforming kitchens with a blend of thoughtful design and meticulous craftsmanship. Locally rooted in Tacoma, WA—licensed, bonded, and insured.
           </p>
           <p className="mt-4 font-semibold text-primary">Over 15 years serving Tacoma homeowners.</p>
         </div>

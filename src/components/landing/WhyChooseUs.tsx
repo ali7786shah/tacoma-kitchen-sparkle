@@ -1,10 +1,10 @@
 import { ShieldCheck, Star, Gem, Wallet } from "lucide-react";
 
 const items = [
-  { title: "Licensed & Insured", icon: ShieldCheck, desc: "[Placeholder: Fully compliant and protected]" },
-  { title: "5-Star Rated on Google", icon: Star, desc: "[Placeholder: Dozens of glowing reviews]" },
-  { title: "Premium Quality Materials", icon: Gem, desc: "[Placeholder: Built to last]" },
-  { title: "Affordable Financing Available", icon: Wallet, desc: "[Placeholder: Flexible options]" },
+  { title: "Licensed & Insured", icon: ShieldCheck, desc: "Fully licensed, bonded, and insured in Washington." },
+  { title: "5-Star Rated on Google", icon: Star, desc: "Trusted by local homeowners with hundreds of glowing reviews." },
+  { title: "Premium Quality Materials", icon: Gem, desc: "Durable cabinetry, quartz surfaces, and pro-grade finishes." },
+  { title: "Affordable Financing Available", icon: Wallet, desc: "Flexible monthly options to fit your budget." },
 ];
 
 export default function WhyChooseUs() {
@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
     <section id="why-us" className="container py-16 md:py-24">
       <header className="mb-8 text-center">
         <h2 className="text-3xl font-bold text-primary md:text-4xl">Why Choose Us</h2>
-        <p className="mt-2 text-foreground/70">[Placeholder: Our commitment to quality and your satisfaction]</p>
+        <p className="mt-2 text-foreground/70">Trusted local team focused on quality, timelines, and your peace of mind.</p>
       </header>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {items.map(({ title, icon: Icon, desc }) => (

@@ -50,7 +50,7 @@ export default function HeroSection() {
                 <BadgeCheck className="text-primary" />
                 <div>
                   <p className="text-sm font-semibold">Years in Business</p>
-                  <p className="text-sm text-muted-foreground">15+ in Tacoma</p>
+                  <p className="text-sm text-muted-foreground">10+ in Tacoma</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 rounded-md border border-border bg-card/70 p-3 shadow-sm">
