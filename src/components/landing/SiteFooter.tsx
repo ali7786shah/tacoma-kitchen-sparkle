@@ -1,34 +1,36 @@
 import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const quickLinks = [
+  { label: "Services", href: "/services" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "About", href: "/about" },
+  { label: "Blog", href: "/blog" },
+  { label: "FAQ", href: "/faq" },
+];
 
 export default function SiteFooter() {
   return (
     <footer className="border-t border-border bg-background">
       <div className="container grid gap-8 py-12 md:grid-cols-4">
         <div>
-          <h4 className="text-lg font-semibold text-primary">[Your Company Name] Remodelers</h4>
-          <p className="mt-2 text-sm text-foreground/70">Transforming Kitchens, Enhancing Homes. [Placeholder tagline]</p>
+          <h4 className="text-lg font-semibold text-primary">[Your Company Name]</h4>
+          <p className="mt-2 text-sm text-foreground/70">Transforming Kitchens, Enhancing Homes.</p>
         </div>
-
         <div>
           <h5 className="font-semibold text-primary">Quick Links</h5>
           <ul className="mt-2 space-y-2 text-sm">
-            <li><a href="#services" className="hover:underline">Services</a></li>
-            <li><a href="#gallery" className="hover:underline">Gallery</a></li>
-            <li><a href="#why-us" className="hover:underline">Why Us</a></li>
-            <li><a href="#blog" className="hover:underline">Blog</a></li>
-            <li><a href="#faq" className="hover:underline">FAQ</a></li>
+            {quickLinks.map((l) => <li key={l.href}><Link to={l.href} className="hover:underline">{l.label}</Link></li>)}
           </ul>
         </div>
-
         <div>
           <h5 className="font-semibold text-primary">Contact</h5>
           <ul className="mt-2 space-y-2 text-sm text-foreground/80">
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> [Placeholder: +1 (555) 123-4567]</li>
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> [Placeholder: hello@example.com]</li>
-            <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> [Placeholder: 1234 Market St, Tacoma, WA]</li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> [+1 (555) 123-4567]</li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> [hello@example.com]</li>
+            <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> [1234 Market St, Tacoma, WA]</li>
           </ul>
         </div>
-
         <div>
           <h5 className="font-semibold text-primary">Follow</h5>
           <div className="mt-2 flex gap-3 text-foreground/70">
@@ -44,7 +46,6 @@ export default function SiteFooter() {
           <div className="flex gap-4">
             <a href="#" className="hover:underline">Privacy Policy</a>
             <a href="#" className="hover:underline">Terms of Service</a>
-            <a href="#" className="hover:underline">Sitemap</a>
           </div>
         </div>
       </div>
