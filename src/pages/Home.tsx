@@ -29,24 +29,25 @@ const testimonials = [
 ];
 
 export default function Home() {
-  const canonical = typeof window !== "undefined" ? window.location.origin : "https://example.com";
+  const canonical = "https://kitchenremodelingtacoma.com";
 
   const localBusinessLd = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    name: "[Your Company Name] Remodelers",
+    name: "Kitchen Remodeling Tacoma",
     url: canonical,
-    areaServed: "Tacoma, WA",
-    address: { "@type": "PostalAddress", addressLocality: "Tacoma", addressRegion: "WA", addressCountry: "US" },
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "120" },
-    telephone: "+1 (555) 123-4567",
+    areaServed: ["Tacoma", "Lakewood", "Puyallup", "Spanaway", "University Place", "Graham", "Dupont", "Milton", "Fox Island", "Roy"],
+    address: { "@type": "PostalAddress", addressLocality: "Tacoma", addressRegion: "WA", postalCode: "98402", addressCountry: "US" },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "150" },
+    telephone: "+1-253-243-2998",
+    priceRange: "$$",
   };
 
   return (
     <MainLayout>
       <Helmet>
-        <title>Tacoma Kitchen Remodeling | Your Dream Kitchen Starts Here</title>
-        <meta name="description" content="Tacoma kitchen remodeling: Beautiful designs, expert craftsmanship, licensed & insured. Free estimates from trusted local experts." />
+        <title>Kitchen Remodeling Tacoma | Expert Kitchen Contractors | (253) 243-2998</title>
+        <meta name="description" content="Tacoma's #1 kitchen remodeling experts. Custom cabinets, countertops, islands & full renovations. Free in-home consultations. Licensed & insured. Call (253) 243-2998" />
         <link rel="canonical" href={canonical} />
         <script type="application/ld+json">{JSON.stringify(localBusinessLd)}</script>
       </Helmet>
@@ -62,14 +63,14 @@ export default function Home() {
 
         <div className="container flex min-h-[80vh] flex-col items-start justify-center py-16">
           <div className="max-w-3xl">
-            <span className="mb-4 inline-flex items-center rounded-full border border-cta/30 bg-cta/10 px-4 py-2 text-sm font-medium text-cta-foreground backdrop-blur-sm">
-              ✨ Tacoma's #1 Kitchen Remodelers
+            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-cta/30 bg-cta/10 px-4 py-2 text-sm font-medium text-foreground backdrop-blur-sm animate-fade-up">
+              ✨ Tacoma's Premier Kitchen Remodelers
             </span>
-            <h1 className="text-balance text-5xl font-bold tracking-tight text-primary sm:text-6xl md:text-7xl">
-              Your Dream Kitchen Starts Here
+            <h1 className="text-balance text-5xl font-extrabold tracking-tight text-primary sm:text-6xl md:text-7xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
+              First Plan, Then Remodel Your Dream Kitchen
             </h1>
-            <p className="mt-6 text-xl text-foreground/80 md:text-2xl">
-              Beautiful Designs. Professional Craftsmanship. Local Experts You Can Trust.
+            <p className="mt-6 text-xl text-foreground/70 md:text-2xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
+              Transform your kitchen with expert design, quality craftsmanship, and transparent pricing. Serving Tacoma homeowners for over 15 years.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Button size="xl" variant="cta" asChild className="group shadow-lg shadow-cta/30">
